@@ -1,0 +1,6 @@
+--creation de la webapp via yiiframework
+/Users/nicolas/NetBeansProject/eBuvette/ebuvette/yii-1.1.14/framework/yiic webapp /Users/nicolas/NetBeansProject/eBuvette/ebuvette/ebuvette
+
+/Users/nicolas/NetBeansProjects/ebuvette/ebuvette/yii-1.1.14/framework/yiic webapp /Users/nicolas/NetBeansProjects/ebuvette/ebuvette/ebuvette
+
+-- note sdeploy on machine portable
