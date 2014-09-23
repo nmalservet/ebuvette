@@ -1,8 +1,6 @@
 <?php
 
-// uncomment the following to define a path alias
-// Yii::setPathOfAlias('local','path/to/local-folder');
-
+Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
@@ -19,7 +17,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
 	),
-
+    'theme'=>'bootstrap',
 	'modules'=>array(	
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
@@ -47,6 +45,9 @@ return array(
 			'password' => 'root',
 			'charset' => 'utf8',
 		),
+            'bootstrap'=>array(
+            'class'=>'bootstrap.components.Bootstrap',
+        ),
             //authorisation manager
 				'authManager'=>array(
 				'class'=>'CDbAuthManager',
