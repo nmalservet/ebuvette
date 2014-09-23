@@ -44,7 +44,7 @@ class SiteController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow',  
-				'actions'=>array('index','vendre','logout'),
+				'actions'=>array('index','vendre','logout','offrir'),
 				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
@@ -86,6 +86,24 @@ class SiteController extends Controller
             $model->user_id=Yii::app()->user->id;
             $model->save();
             Yii::app()->user->setFlash('success', "La vente a bien été enregistrée.");
+            //update du compte restant
+            $article=Article::model()->findByPk($articleId);
+            $article->nombre_restant=$article->nombre_restant-1;
+            $article->save();
+            $this->render('index');
+        }
+        
+                /*
+         * 
+         * action d offrir un article
+         */
+        public function actionOffrir($articleId){
+            $model=new Offrande;
+            $model->article_id=$articleId;
+            
+            $model->user_id=Yii::app()->user->id;
+            $model->save();
+            Yii::app()->user->setFlash('success', "La boisson a bien été offerte.");
             //update du compte restant
             $article=Article::model()->findByPk($articleId);
             $article->nombre_restant=$article->nombre_restant-1;
