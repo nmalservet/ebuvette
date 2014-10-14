@@ -34,6 +34,8 @@
                                 array('label'=>'Ventes', 'url'=>array('/vente/admin')),
                                 array('label'=>'Retraits', 'url'=>array('/retrait/admin')),
                                 array('label'=>'Apports', 'url'=>array('/apport/admin')),
+                                array('label'=>'Credits', 'url'=>array('/credit/admin')),
+                                array('label'=>'Dettes', 'url'=>array('/dette/admin')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

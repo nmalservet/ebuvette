@@ -1,5 +1,4 @@
 <?php
-
 Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
@@ -7,8 +6,6 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'eBuvette',
         'language'=>'fr_FR',
-
-
 	// preloading 'log' component
 	'preload'=>array('log'),
 

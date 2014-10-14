@@ -25,7 +25,7 @@ class AbstractController extends Controller
 	{
 		return array(
 			array('allow',  
-				'actions'=>array('admin','create'),
+				'actions'=>array('admin','create','update'),
 				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
